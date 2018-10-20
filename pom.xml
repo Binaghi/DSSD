@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ar.edu.unlp.info.dssd</groupId>
   <artifactId>supermercado</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>supermercado Maven Webapp</name>
   <url>http://maven.apache.org</url>
@@ -16,7 +16,6 @@
 	<jsp-api.version>2.2</jsp-api.version>
 	<jstl.version>1.2</jstl.version>
 	<cxf.version>3.0.4</cxf.version>
-	
   </properties>
   <dependencies>
     <dependency>
@@ -135,5 +134,16 @@
   </dependencies>
   <build>
     <finalName>supermercado</finalName>
+     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
