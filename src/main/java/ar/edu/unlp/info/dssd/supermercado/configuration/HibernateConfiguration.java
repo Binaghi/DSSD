@@ -35,14 +35,14 @@ public class HibernateConfiguration {
 	  @Bean
 	  public DataSource dataSource() {
 	    BasicDataSource dataSource = new BasicDataSource();
-	    dataSource.setDriverClassName(environment.getRequiredProperty("jdbc.driverClassName"));
+	    /*dataSource.setDriverClassName(environment.getRequiredProperty("jdbc.driverClassName"));
         dataSource.setUrl(environment.getRequiredProperty("jdbc.url"));
         dataSource.setUsername(environment.getRequiredProperty("jdbc.username"));
-        dataSource.setPassword(environment.getRequiredProperty("jdbc.password"));
-	    /*dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-	    dataSource.setUrl("jdbc:mysql://localhost:3306/empleados");
-	    dataSource.setUsername("root");
-	    dataSource.setPassword("");*/
+        dataSource.setPassword(environment.getRequiredProperty("jdbc.password"));*/
+	    dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+	    dataSource.setUrl("jdbc:mysql://us-cdbr-iron-east-01.cleardb.net:3306/heroku_abf188c9fce321e");
+	    dataSource.setUsername("b4b8e6692d332a");
+	    dataSource.setPassword("3d2a9e31");
 
 	    return dataSource;
 	  }
