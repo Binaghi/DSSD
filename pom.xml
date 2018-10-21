@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ar.edu.unlp.info.dssd</groupId>
   <artifactId>supermercado</artifactId>
-  <packaging>war</packaging>
-  <version>1.0</version>
+  <packaging>jar</packaging>
+  <version>0.0.1-SNAPSHOT</version>
   <name>supermercado</name>
   <url>http://maven.apache.org</url>
    <properties>
@@ -143,35 +143,6 @@
           <source>1.8</source>
           <target>1.8</target>
         </configuration>
-      </plugin>
-      <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-dependency-plugin</artifactId>
-          <executions>
-              <execution>
-                  <phase>package</phase>
-                  <goals>
-                      <goal>copy</goal>
-                  </goals>
-                  <configuration>
-                      <artifactItems>
-                          <artifactItem>
-                              <groupId>com.github.jsimone</groupId>
-                              <artifactId>webapp-runner</artifactId>
-                              <version>8.0.30.2</version>
-                              <destFileName>webapp-runner.jar</destFileName>
-                          </artifactItem>
-                      </artifactItems>
-                  </configuration>
-              </execution>
-          </executions>
-      </plugin>
-      <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-war-plugin</artifactId>
-          <configuration>
-              <failOnMissingWebXml>false</failOnMissingWebXml>
-          </configuration>
       </plugin>
     </plugins>
   </build>
