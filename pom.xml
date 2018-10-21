@@ -3,14 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ar.edu.unlp.info.dssd</groupId>
   <artifactId>supermercado</artifactId>
-  <packaging>jar</packaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <version>1.0</version>
   <name>supermercado</name>
   <url>http://maven.apache.org</url>
    <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring.version>5.0.4.RELEASE</spring.version>
-<!--     <junit.jupiter.version>5.0.0</junit.jupiter.version> -->
+<!--    0.0.1-SNAPSHOT <junit.jupiter.version>5.0.0</junit.jupiter.version> -->
     <jackson-jaxrs-json-provider.version>2.9.1</jackson-jaxrs-json-provider.version>
 	<servlet-api.version>2.5</servlet-api.version>
 	<jsp-api.version>2.2</jsp-api.version>
@@ -143,6 +143,35 @@
           <source>1.8</source>
           <target>1.8</target>
         </configuration>
+      </plugin>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <executions>
+              <execution>
+                  <phase>package</phase>
+                  <goals>
+                      <goal>copy</goal>
+                  </goals>
+                  <configuration>
+                      <artifactItems>
+                          <artifactItem>
+                              <groupId>com.github.jsimone</groupId>
+                              <artifactId>webapp-runner</artifactId>
+                              <version>8.0.30.2</version>
+                              <destFileName>webapp-runner.jar</destFileName>
+                          </artifactItem>
+                      </artifactItems>
+                  </configuration>
+              </execution>
+          </executions>
+      </plugin>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <configuration>
+              <failOnMissingWebXml>false</failOnMissingWebXml>
+          </configuration>
       </plugin>
     </plugins>
   </build>
