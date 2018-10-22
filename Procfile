@@ -1,1 +1,1 @@
-web: java -jar target/supermercado.jar
+web: java -jar target/supermercado-1.0.jar
