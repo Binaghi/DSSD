@@ -1,1 +1,1 @@
-web: java -jar target/supermercado-1.0.jar
+web: java -Dserver.port=$PORT -jar target/supermercado-1.0.jar
